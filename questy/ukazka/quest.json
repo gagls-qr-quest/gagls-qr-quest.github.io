@@ -1,0 +1,95 @@
+{
+  "format": "qrq-1",
+  "id": "ukazka",
+  "title": "Ukážkový quest",
+  "intro": "Vitaj na ukážkovom queste! Nájdi 5 stanovíšť na dvoch poschodiach, naskenuj ich QR kódy a vyrieš úlohy. Nápoveda stojí body.",
+  "mode": "free",
+  "floors": [
+    { "id": "p0", "name": "Prízemie", "image": "podorys-p0.svg" },
+    { "id": "p1", "name": "1. poschodie", "image": "podorys-p1.svg" }
+  ],
+  "stations": [
+    {
+      "id": "kniznica",
+      "code": "G6A9WP",
+      "name": "Knižnica",
+      "floor": "p0",
+      "x": 22.6,
+      "y": 37.3,
+      "points": 10,
+      "task": {
+        "type": "text",
+        "question": "Ktorá slovenská spisovateľka napísala novelu Ťapákovci? Stačí jej pseudonym.",
+        "answers": ["Timrava", "Božena Slančíková-Timrava", "Slančíková"]
+      },
+      "hint": { "text": "Pochádzala z Polichna a jej pseudonym má 7 písmen.", "cost": 3 },
+      "success": "Výborne! Knihy máš v malíčku."
+    },
+    {
+      "id": "telocvicna",
+      "code": "HWGQ49",
+      "name": "Telocvičňa",
+      "floor": "p0",
+      "x": 77.4,
+      "y": 74.4,
+      "points": 10,
+      "task": {
+        "type": "number",
+        "question": "Koľko hráčov jedného družstva je naraz na ihrisku vo volejbale?",
+        "answers": ["6"]
+      },
+      "hint": { "text": "Stoja v dvoch radoch po troch.", "cost": 3 },
+      "success": "Správne, šestka!"
+    },
+    {
+      "id": "jedalen",
+      "code": "VBZZ75",
+      "name": "Jedáleň",
+      "floor": "p0",
+      "x": 22.6,
+      "y": 84.4,
+      "points": 10,
+      "task": {
+        "type": "choice",
+        "question": "Ktorá potravina má najviac bielkovín na 100 g?",
+        "choices": ["Ryža", "Šošovica", "Jablko"],
+        "answers": ["Šošovica"]
+      },
+      "hint": { "text": "Je to strukovina.", "cost": 3 },
+      "success": "Áno, šošovica je bielkovinová bomba."
+    },
+    {
+      "id": "chemia",
+      "code": "XFUU7K",
+      "name": "Chemické laboratórium",
+      "floor": "p1",
+      "x": 22.6,
+      "y": 21.8,
+      "points": 10,
+      "task": {
+        "type": "text",
+        "question": "Aký prvok má v periodickej tabuľke značku Fe?",
+        "answers": ["železo"]
+      },
+      "hint": { "text": "Je magnetický a hrdzavie.", "cost": 3 },
+      "success": "Presne, železo (lat. ferrum)."
+    },
+    {
+      "id": "informatika",
+      "code": "3SYY2E",
+      "name": "Učebňa informatiky",
+      "floor": "p1",
+      "x": 77.4,
+      "y": 59.6,
+      "points": 15,
+      "task": {
+        "type": "choice",
+        "question": "V akom programovacom jazyku je napísaná táto hra?",
+        "choices": ["Python", "JavaScript", "Java"],
+        "answers": ["JavaScript"]
+      },
+      "hint": { "text": "Beží priamo v prehliadači.", "cost": 5 },
+      "success": "Tak je! O pár mesiacov ho budeš ovládať aj ty."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif">
+  <title>1. poschodie – ukážkový pôdorys</title>
+  <rect x="0" y="0" width="600" height="900" fill="#ffffff"/>
+  <rect x="20" y="20" width="560" height="860" rx="8" fill="#f7fafc" stroke="#183b56" stroke-width="6"/>
+  <rect x="245" y="26" width="110" height="848" fill="#ffffff"/>
+  <rect x="26" y="26" width="219" height="220" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="135.5" y="129.5" text-anchor="middle" font-size="21" font-weight="700" fill="#183b56">Chemické</text>
+  <text x="135.5" y="156.5" text-anchor="middle" font-size="21" font-weight="700" fill="#183b56">laboratórium</text>
+  <rect x="241" y="159.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="26" y="246" width="219" height="200" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="135.5" y="352.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Učebňa 11</text>
+  <rect x="241" y="369.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="26" y="446" width="219" height="200" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="135.5" y="552.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Učebňa 12</text>
+  <rect x="241" y="569.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="26" y="646" width="219" height="228" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="135.5" y="766.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Zborovňa</text>
+  <rect x="241" y="783.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="355" y="26" width="219" height="220" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="464.5" y="142.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Fyzika</text>
+  <rect x="351" y="159.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="355" y="246" width="219" height="100" fill="#f3f6f9" stroke="#8aa3b8" stroke-width="2"/>
+  <line x1="367" y1="257.1" x2="562" y2="257.1" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="268.2" x2="562" y2="268.2" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="279.3" x2="562" y2="279.3" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="290.4" x2="562" y2="290.4" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="301.6" x2="562" y2="301.6" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="312.7" x2="562" y2="312.7" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="323.8" x2="562" y2="323.8" stroke="#b7c7d4" stroke-width="2"/>
+  <line x1="367" y1="334.9" x2="562" y2="334.9" stroke="#b7c7d4" stroke-width="2"/>
+  <text x="464.5" y="302.0" text-anchor="middle" font-size="18" font-weight="700" fill="#5a6b7b" paint-order="stroke" stroke="#f3f6f9" stroke-width="6">Schody</text>
+  <rect x="355" y="346" width="219" height="260" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="464.5" y="469.5" text-anchor="middle" font-size="21" font-weight="700" fill="#183b56">Učebňa</text>
+  <text x="464.5" y="496.5" text-anchor="middle" font-size="21" font-weight="700" fill="#183b56">informatiky</text>
+  <rect x="351" y="499.0" width="8" height="34" fill="#ffffff"/>
+  <rect x="355" y="606" width="219" height="268" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
+  <text x="464.5" y="746.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Učebňa 15</text>
+  <rect x="351" y="763.0" width="8" height="34" fill="#ffffff"/>
+  <text x="300.0" y="450.0" text-anchor="middle" font-size="18" font-weight="700" letter-spacing="6" fill="#a9bccb" transform="rotate(-90 300.0 450.0)">CHODBA</text>
+  <text x="34" y="894" font-size="13" fill="#8aa3b8">1. poschodie · ukážka, nahradí sa skutočným pôdorysom</text>
+</svg>

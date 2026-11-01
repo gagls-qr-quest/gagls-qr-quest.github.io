@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testovacie QR kódy – QR Quest</title>
+  <link rel="stylesheet" href="shared/v1/style.css">
+  <style>
+    .karty { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .karta { text-align: center; }
+    .karta .qr { display: grid; place-items: center; min-height: 220px; margin: 8px 0 12px; }
+    .karta .qr svg, .karta .qr canvas { width: 200px; height: 200px; }
+    .karta h3 { margin-bottom: 4px; }
+    .karta a { word-break: break-all; font-size: 0.8rem; }
+    @media print {
+      .karty { grid-template-columns: repeat(2, 1fr); }
+      .karta { break-inside: avoid; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="qrq-header">
+    <span class="qrq-logo">QR</span>
+    <h1>Testovacie QR kódy</h1>
+  </header>
+
+  <main class="qrq-main qrq-main--wide">
+    <section class="qrq-card qrq-no-print">
+      <p>Naskenuj kód fotoaparátom v mobile. Otvorí sa hra presne na danom stanovišti.
+        Iný quest: pridaj do adresy <span class="qrq-code">?q=id-questu</span>.</p>
+      <div class="qrq-row">
+        <button class="qrq-btn" type="button" onclick="window.print()">Vytlačiť</button>
+        <a class="qrq-btn qrq-btn--secondary" href="./">Späť</a>
+      </div>
+    </section>
+    <p id="stav" class="qrq-muted">Načítavam quest…</p>
+    <section id="karty" class="karty"></section>
+  </main>
+
+  <!-- Knižnica na kreslenie QR kódov: https://github.com/kozakdenys/qr-code-styling -->
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.9.2/lib/qr-code-styling.js"></script>
+  <script type="module">
+    import { loadQuest, getQuestId, stationUrl } from './shared/v1/qrq.js';
+
+    const stav = document.querySelector('#stav');
+    const karty = document.querySelector('#karty');
+
+    try {
+      const questId = getQuestId();
+      const quest = await loadQuest(questId);
+      stav.textContent = `${quest.title} · ${quest.stations.length} stanovíšť`;
+
+      for (const stanoviste of quest.stations) {
+        const url = stationUrl(questId, stanoviste.code);
+
+        const karta = document.createElement('article');
+        karta.className = 'qrq-card karta';
+
+        const nadpis = document.createElement('h3');
+        nadpis.textContent = stanoviste.name;
+
+        const kod = document.createElement('p');
+        kod.className = 'qrq-muted';
+        kod.textContent = `kód ${stanoviste.code}`;
+
+        const qr = document.createElement('div');
+        qr.className = 'qr';
+
+        const odkaz = document.createElement('a');
+        odkaz.href = url;
+        odkaz.textContent = url;
+
+        karta.append(nadpis, kod, qr, odkaz);
+        karty.append(karta);
+
+        new QRCodeStyling({
+          width: 200,
+          height: 200,
+          type: 'svg',
+          data: url,
+          margin: 0,
+          qrOptions: { errorCorrectionLevel: 'M' },
+          dotsOptions: { color: '#183b56', type: 'rounded' },
+          cornersSquareOptions: { color: '#183b56', type: 'extra-rounded' },
+          cornersDotOptions: { color: '#2e82aa' },
+          backgroundOptions: { color: '#ffffff' },
+        }).append(qr);
+      }
+    } catch (chyba) {
+      stav.className = 'qrq-error';
+      stav.textContent = chyba.message;
+      console.error(chyba);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+/* QR Quest – spoločný vzhľad, verzia 1
+   Farby vychádzajú z prezentácie projektu (TUKE × GAGLS).
+   Moduly ho načítajú cez:
+   <link rel="stylesheet" href="https://gagls-qr-quest.github.io/shared/v1/style.css">
+   Vlastné úpravy patria do style.css v module, nie sem. */
+
+:root {
+  --qrq-navy: #183b56;
+  --qrq-navy-2: #21506f;
+  --qrq-blue: #2e82aa;
+  --qrq-blue-soft: #e3f0f7;
+  --qrq-green: #31855b;
+  --qrq-green-soft: #e3f3ea;
+  --qrq-amber: #d9952b;
+  --qrq-amber-soft: #fbf0dc;
+  --qrq-red: #c2453d;
+  --qrq-red-soft: #fbe9e7;
+
+  --qrq-bg: #f3f7fa;
+  --qrq-surface: #ffffff;
+  --qrq-line: #d8e3ec;
+  --qrq-text: #13212d;
+  --qrq-muted: #5a6b7b;
+
+  --qrq-radius: 14px;
+  --qrq-radius-small: 10px;
+  --qrq-shadow: 0 1px 2px rgba(16, 40, 60, 0.08), 0 6px 20px rgba(16, 40, 60, 0.06);
+  --qrq-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --qrq-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--qrq-font);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--qrq-text);
+  background: var(--qrq-bg);
+}
+
+a {
+  color: var(--qrq-blue);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+/* ---------- Hlavička ---------- */
+
+.qrq-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #fff;
+  background: var(--qrq-navy);
+  box-shadow: 0 2px 10px rgba(16, 40, 60, 0.25);
+}
+
+.qrq-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.qrq-header .qrq-header__right {
+  margin-left: auto;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Logo: malý „QR“ štvorec v rohu */
+.qrq-logo {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 9px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--qrq-navy);
+  background: #fff;
+  box-shadow: inset 0 0 0 3px var(--qrq-amber);
+}
+
+/* ---------- Rozloženie ---------- */
+
+.qrq-main {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.qrq-main--wide {
+  max-width: 1100px;
+}
+
+.qrq-card {
+  margin: 0 0 16px;
+  padding: 18px 16px;
+  background: var(--qrq-surface);
+  border: 1px solid var(--qrq-line);
+  border-radius: var(--qrq-radius);
+  box-shadow: var(--qrq-shadow);
+}
+
+.qrq-stack > * + * {
+  margin-top: 12px;
+}
+
+.qrq-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.qrq-footer {
+  padding: 24px 16px 32px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--qrq-muted);
+}
+
+/* ---------- Tlačidlá a polia ---------- */
+
+.qrq-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px; /* pohodlné na palec */
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  color: #fff;
+  background: var(--qrq-blue);
+  cursor: pointer;
+  transition: transform 0.06s ease, filter 0.15s ease;
+}
+
+.qrq-btn:hover {
+  filter: brightness(1.06);
+}
+
+.qrq-btn:active {
+  transform: translateY(1px);
+}
+
+.qrq-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.qrq-btn--block {
+  width: 100%;
+}
+
+.qrq-btn--secondary {
+  color: var(--qrq-blue);
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--qrq-blue);
+}
+
+.qrq-btn--success {
+  background: var(--qrq-green);
+}
+
+.qrq-btn--warning {
+  color: var(--qrq-text);
+  background: var(--qrq-amber);
+}
+
+.qrq-input,
+.qrq-select,
+.qrq-textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--qrq-text);
+  background: #fff;
+  border: 2px solid var(--qrq-line);
+  border-radius: 12px;
+}
+
+.qrq-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.qrq-label {
+  display: block;
+  margin: 0 0 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.qrq-btn:focus-visible,
+.qrq-input:focus,
+.qrq-select:focus,
+.qrq-textarea:focus {
+  outline: 3px solid #9fd0e6;
+  outline-offset: 2px;
+  border-color: var(--qrq-blue);
+}
+
+/* ---------- Drobnosti ---------- */
+
+.qrq-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: var(--qrq-navy);
+  background: var(--qrq-blue-soft);
+}
+
+.qrq-badge--success {
+  color: var(--qrq-green);
+  background: var(--qrq-green-soft);
+}
+
+.qrq-badge--warning {
+  color: #8a5a10;
+  background: var(--qrq-amber-soft);
+}
+
+.qrq-muted {
+  color: var(--qrq-muted);
+}
+
+.qrq-success {
+  color: var(--qrq-green);
+  font-weight: 650;
+}
+
+.qrq-error {
+  color: var(--qrq-red);
+  font-weight: 650;
+}
+
+.qrq-message {
+  padding: 12px 14px;
+  border-radius: var(--qrq-radius-small);
+  background: var(--qrq-blue-soft);
+}
+
+.qrq-message--success {
+  background: var(--qrq-green-soft);
+}
+
+.qrq-message--error {
+  background: var(--qrq-red-soft);
+}
+
+.qrq-code {
+  font-family: var(--qrq-mono);
+  font-size: 0.9em;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: #eef3f7;
+}
+
+pre.qrq-code {
+  display: block;
+  padding: 12px;
+  overflow: auto;
+  max-height: 60vh;
+  white-space: pre;
+}
+
+@media print {
+  .qrq-header,
+  .qrq-footer,
+  .qrq-no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+}

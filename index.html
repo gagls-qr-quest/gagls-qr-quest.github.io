@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Quest GAGLS</title>
+  <meta name="description" content="Hra po budove gymnázia: naskenuj QR kód, vyrieš úlohu, zbieraj body.">
+  <link rel="stylesheet" href="shared/v1/style.css">
+  <style>
+    .hero {
+      padding: 28px 20px;
+      color: #fff;
+      background: linear-gradient(160deg, var(--qrq-navy) 0%, var(--qrq-navy-2) 100%);
+      border-radius: var(--qrq-radius);
+      box-shadow: var(--qrq-shadow);
+      margin-bottom: 16px;
+    }
+    .hero h2 { font-size: 1.7rem; margin-bottom: 8px; }
+    .hero p { opacity: 0.92; margin-bottom: 18px; }
+    .moduly { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+    .modul { display: block; text-decoration: none; color: inherit; }
+    .modul strong { display: block; font-size: 1.05rem; margin-bottom: 4px; color: var(--qrq-navy); }
+    .modul span { font-size: 0.92rem; color: var(--qrq-muted); }
+    .modul:hover { border-color: var(--qrq-blue); }
+  </style>
+</head>
+<body>
+  <header class="qrq-header">
+    <span class="qrq-logo">QR</span>
+    <h1>QR Quest GAGLS</h1>
+  </header>
+
+  <main class="qrq-main">
+    <section class="hero">
+      <h2>Hra po budove gymnázia</h2>
+      <p>Nájdi stanovište, naskenuj QR kód, vyrieš úlohu a zbieraj body. Mapa ti ukáže, kde ešte treba hľadať.</p>
+      <a class="qrq-btn qrq-btn--warning" href="hra/?q=ukazka">Hrať ukážku</a>
+    </section>
+
+    <section class="moduly" aria-label="Moduly hry">
+      <a class="qrq-card modul" href="hra/?q=ukazka">
+        <strong>Hra</strong>
+        <span>Stanovištia, úlohy, body a nápovedy.</span>
+      </a>
+      <a class="qrq-card modul" href="mapa/?q=ukazka">
+        <strong>Mapa školy</strong>
+        <span>Pôdorysy poschodí a kde sú stanovištia.</span>
+      </a>
+      <a class="qrq-card modul" href="editor/">
+        <strong>Editor</strong>
+        <span>Tvorba questu, QR karty a výsledky.</span>
+      </a>
+      <a class="qrq-card modul" href="demo-qr.html">
+        <strong>Testovacie QR</strong>
+        <span>QR kódy ukážkového questu na skúšku.</span>
+      </a>
+    </section>
+
+    <section class="qrq-card">
+      <h3>O projekte</h3>
+      <p>Mentoringový projekt TUKE × Gymnázium arm. gen. L. Svobodu v Humennom, školský rok 2026/27.
+        Hru tvoria traja študenti 4. ročníka, každý vlastní jeden modul.</p>
+      <p class="qrq-muted">Formát dát a pravidlá spolupráce:
+        <a href="https://github.com/gagls-qr-quest/gagls-qr-quest.github.io/blob/main/FORMAT.md">FORMAT.md</a> ·
+        <a href="https://github.com/gagls-qr-quest">zdrojový kód na GitHube</a></p>
+    </section>
+  </main>
+
+  <footer class="qrq-footer">QR Quest GAGLS · mentoring TUKE × GAGLS 2026/27</footer>
+</body>
+</html>
