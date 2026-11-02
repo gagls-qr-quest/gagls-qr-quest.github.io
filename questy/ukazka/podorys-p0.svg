@@ -7,13 +7,13 @@
   <text x="135.5" y="112.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Kabinet</text>
   <rect x="241" y="129.0" width="8" height="34" fill="#ffffff"/>
   <rect x="26" y="186" width="219" height="200" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
-  <text x="135.5" y="293.3" text-anchor="middle" font-size="22" font-weight="700" fill="#183b56">Knižnica</text>
+  <text x="135.5" y="293.3" text-anchor="middle" font-size="22" font-weight="700" fill="#183b56">Skrinky</text>
   <rect x="241" y="309.0" width="8" height="34" fill="#ffffff"/>
   <rect x="26" y="386" width="219" height="160" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
   <text x="135.5" y="472.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Šatne</text>
   <rect x="241" y="489.0" width="8" height="34" fill="#ffffff"/>
   <rect x="26" y="546" width="219" height="328" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
-  <text x="135.5" y="717.3" text-anchor="middle" font-size="22" font-weight="700" fill="#183b56">Jedáleň</text>
+  <text x="135.5" y="717.3" text-anchor="middle" font-size="22" font-weight="700" fill="#183b56">Aula</text>
   <rect x="241" y="733.0" width="8" height="34" fill="#ffffff"/>
   <rect x="355" y="26" width="219" height="220" fill="#e8f0f6" stroke="#8aa3b8" stroke-width="2"/>
   <text x="464.5" y="142.7" text-anchor="middle" font-size="20" font-weight="700" fill="#183b56">Učebňa 01</text>

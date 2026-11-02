@@ -5,25 +5,38 @@
   "intro": "Vitaj na ukážkovom queste! Nájdi 5 stanovíšť na dvoch poschodiach, naskenuj ich QR kódy a vyrieš úlohy. Nápoveda stojí body.",
   "mode": "free",
   "floors": [
-    { "id": "p0", "name": "Prízemie", "image": "podorys-p0.svg" },
-    { "id": "p1", "name": "1. poschodie", "image": "podorys-p1.svg" }
+    {
+      "id": "p0",
+      "name": "Prízemie",
+      "image": "podorys-p0.svg"
+    },
+    {
+      "id": "p1",
+      "name": "1. poschodie",
+      "image": "podorys-p1.svg"
+    }
   ],
   "stations": [
     {
-      "id": "kniznica",
+      "id": "skrinky",
       "code": "G6A9WP",
-      "name": "Knižnica",
+      "name": "Skrinky",
       "floor": "p0",
       "x": 22.6,
       "y": 37.3,
       "points": 10,
       "task": {
-        "type": "text",
-        "question": "Ktorá slovenská spisovateľka napísala novelu Ťapákovci? Stačí jej pseudonym.",
-        "answers": ["Timrava", "Božena Slančíková-Timrava", "Slančíková"]
+        "type": "number",
+        "question": "Zámok na skrinke má 3 kolieska s číslicami 0–9. Koľko rôznych kombinácií existuje?",
+        "answers": [
+          "1000"
+        ]
       },
-      "hint": { "text": "Pochádzala z Polichna a jej pseudonym má 7 písmen.", "cost": 3 },
-      "success": "Výborne! Knihy máš v malíčku."
+      "hint": {
+        "text": "Každé koliesko má 10 možností.",
+        "cost": 3
+      },
+      "success": "Presne, 10 × 10 × 10 = 1000."
     },
     {
       "id": "telocvicna",
@@ -36,27 +49,41 @@
       "task": {
         "type": "number",
         "question": "Koľko hráčov jedného družstva je naraz na ihrisku vo volejbale?",
-        "answers": ["6"]
+        "answers": [
+          "6"
+        ]
       },
-      "hint": { "text": "Stoja v dvoch radoch po troch.", "cost": 3 },
+      "hint": {
+        "text": "Stoja v dvoch radoch po troch.",
+        "cost": 3
+      },
       "success": "Správne, šestka!"
     },
     {
-      "id": "jedalen",
+      "id": "aula",
       "code": "VBZZ75",
-      "name": "Jedáleň",
+      "name": "Aula",
       "floor": "p0",
       "x": 22.6,
       "y": 84.4,
       "points": 10,
       "task": {
         "type": "choice",
-        "question": "Ktorá potravina má najviac bielkovín na 100 g?",
-        "choices": ["Ryža", "Šošovica", "Jablko"],
-        "answers": ["Šošovica"]
+        "question": "Kto zložil Ódu na radosť, ktorá je dnes hymnou Európskej únie?",
+        "choices": [
+          "Mozart",
+          "Beethoven",
+          "Bach"
+        ],
+        "answers": [
+          "Beethoven"
+        ]
       },
-      "hint": { "text": "Je to strukovina.", "cost": 3 },
-      "success": "Áno, šošovica je bielkovinová bomba."
+      "hint": {
+        "text": "Zložil ju, keď už takmer nepočul.",
+        "cost": 3
+      },
+      "success": "Áno, Ludwig van Beethoven, 9. symfónia."
     },
     {
       "id": "chemia",
@@ -69,9 +96,14 @@
       "task": {
         "type": "text",
         "question": "Aký prvok má v periodickej tabuľke značku Fe?",
-        "answers": ["železo"]
+        "answers": [
+          "železo"
+        ]
       },
-      "hint": { "text": "Je magnetický a hrdzavie.", "cost": 3 },
+      "hint": {
+        "text": "Je magnetický a hrdzavie.",
+        "cost": 3
+      },
       "success": "Presne, železo (lat. ferrum)."
     },
     {
@@ -85,10 +117,19 @@
       "task": {
         "type": "choice",
         "question": "V akom programovacom jazyku je napísaná táto hra?",
-        "choices": ["Python", "JavaScript", "Java"],
-        "answers": ["JavaScript"]
+        "choices": [
+          "Python",
+          "JavaScript",
+          "Java"
+        ],
+        "answers": [
+          "JavaScript"
+        ]
       },
-      "hint": { "text": "Beží priamo v prehliadači.", "cost": 5 },
+      "hint": {
+        "text": "Beží priamo v prehliadači.",
+        "cost": 5
+      },
       "success": "Tak je! O pár mesiacov ho budeš ovládať aj ty."
     }
   ]
