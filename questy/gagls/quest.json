@@ -1,0 +1,141 @@
+{
+  "format": "qrq-1",
+  "id": "gagls",
+  "title": "Spoznaj GAGLS",
+  "intro": "Vitaj na GAGLS! Nájdi 5 stanovíšť na troch poschodiach školy, naskenuj ich QR kódy a vyrieš úlohy. Nápoveda stojí body.",
+  "mode": "free",
+  "floors": [
+    {
+      "id": "p0",
+      "name": "Prízemie",
+      "image": "podorys-p0.png"
+    },
+    {
+      "id": "p1",
+      "name": "1. poschodie",
+      "image": "podorys-p1.png"
+    },
+    {
+      "id": "p2",
+      "name": "2. poschodie",
+      "image": "podorys-p2.png"
+    }
+  ],
+  "stations": [
+    {
+      "id": "skrinky",
+      "code": "7ZE794",
+      "name": "Skrinky",
+      "floor": "p0",
+      "x": 20,
+      "y": 26,
+      "points": 10,
+      "task": {
+        "type": "number",
+        "question": "Zámok na skrinke má 3 kolieska s číslicami 0–9. Koľko rôznych kombinácií existuje?",
+        "answers": [
+          "1000"
+        ]
+      },
+      "hint": {
+        "text": "Každé koliesko má 10 možností.",
+        "cost": 3
+      },
+      "success": "Presne, 10 × 10 × 10 = 1000."
+    },
+    {
+      "id": "telocvicna",
+      "code": "FA5249",
+      "name": "Telocvičňa",
+      "floor": "p0",
+      "x": 22,
+      "y": 64,
+      "points": 10,
+      "task": {
+        "type": "number",
+        "question": "Koľko hráčov jedného družstva je naraz na ihrisku vo volejbale?",
+        "answers": [
+          "6"
+        ]
+      },
+      "hint": {
+        "text": "Stoja v dvoch radoch po troch.",
+        "cost": 3
+      },
+      "success": "Správne, šestka!"
+    },
+    {
+      "id": "aula",
+      "code": "DBG465",
+      "name": "Aula",
+      "floor": "p0",
+      "x": 67,
+      "y": 50,
+      "points": 10,
+      "task": {
+        "type": "choice",
+        "question": "Kto zložil Ódu na radosť, ktorá je dnes hymnou Európskej únie?",
+        "choices": [
+          "Mozart",
+          "Beethoven",
+          "Bach"
+        ],
+        "answers": [
+          "Beethoven"
+        ]
+      },
+      "hint": {
+        "text": "Zložil ju, keď už takmer nepočul.",
+        "cost": 3
+      },
+      "success": "Áno, Ludwig van Beethoven, 9. symfónia."
+    },
+    {
+      "id": "chemia",
+      "code": "PMDG6S",
+      "name": "Chemické laboratórium",
+      "floor": "p1",
+      "x": 15,
+      "y": 33,
+      "points": 10,
+      "task": {
+        "type": "text",
+        "question": "Aký prvok má v periodickej tabuľke značku Fe?",
+        "answers": [
+          "železo"
+        ]
+      },
+      "hint": {
+        "text": "Je magnetický a hrdzavie.",
+        "cost": 3
+      },
+      "success": "Presne, železo (lat. ferrum)."
+    },
+    {
+      "id": "informatika",
+      "code": "Y7UZ3D",
+      "name": "Učebňa informatiky",
+      "floor": "p2",
+      "x": 15,
+      "y": 36,
+      "points": 15,
+      "task": {
+        "type": "choice",
+        "question": "V akom programovacom jazyku je napísaná táto hra?",
+        "choices": [
+          "Python",
+          "JavaScript",
+          "Java"
+        ],
+        "answers": [
+          "JavaScript"
+        ]
+      },
+      "hint": {
+        "text": "Beží priamo v prehliadači.",
+        "cost": 5
+      },
+      "success": "Tak je! O pár mesiacov ho budeš ovládať aj ty."
+    }
+  ]
+}
